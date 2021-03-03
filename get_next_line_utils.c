@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 02:28:35 by hyyang            #+#    #+#             */
-/*   Updated: 2021/02/21 23:12:19 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/03/04 01:29:19 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,6 @@ static size_t	ft_strlen(const char *s)
 	while (*(s + len))
 		len++;
 	return (len);
-}
-
-static size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
-{
-	size_t	src_len;
-
-	if (!dst && !src)
-		return (0);
-	src_len = ft_strlen(src);
-	if (dstsize == 0)
-		return (src_len);
-	while (--dstsize && *src)
-		*dst++ = *src++;
-	if (dst != 0)
-		*dst = '\0';
-	return (src_len);
 }
 
 static size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
@@ -89,7 +73,7 @@ char			*ft_strjoin(char const *s1, char const *s2)
 	s2_len = ft_strlen(s2);
 	if (!(str = (char *)malloc((s1_len + s2_len + 1) * sizeof(char))))
 		return (0);
-	ft_strlcpy(str, s1, s1_len + 1);
+	ft_strlcat(str, s1, s1_len + 1);
 	ft_strlcat(str, s2, s1_len + s2_len + 1);
 	return (str);
 }
