@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 02:28:18 by hyyang            #+#    #+#             */
-/*   Updated: 2021/02/21 23:02:09 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/03/04 02:40:48 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@
 #endif
 
 int		get_next_line(int fd, char **line);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strchr(const char *s, int c)
+char	*ft_strjoin(char *s1, char const *s2);
+char	*ft_strdup(const char *s1);
+char	*ft_strchr(const char *s, int c);
 
 #endif

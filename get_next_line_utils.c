@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 02:28:35 by hyyang            #+#    #+#             */
-/*   Updated: 2021/03/04 01:58:01 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/03/04 02:41:05 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static size_t	ft_strlen(const char *s)
 	return (len);
 }
 
-size_t			ft_strcpy(char *dst, const char *src)
+static size_t	ft_strcpy(char *dst, const char *src)
 {
 	size_t	i;
 
@@ -35,7 +35,7 @@ size_t			ft_strcpy(char *dst, const char *src)
 	return (i);
 }
 
-static char		*ft_strdup(const char *s1)
+char			*ft_strdup(const char *s1)
 {
 	char	*s2;
 	int		i;
@@ -47,7 +47,7 @@ static char		*ft_strdup(const char *s1)
 	return (s2);
 }
 
-char			*ft_strjoin(char const *s1, char const *s2)
+char			*ft_strjoin(char *s1, char const *s2)
 {
 	char	*str;
 	size_t	i;
@@ -55,13 +55,14 @@ char			*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 && !s2)
 		return (0);
 	if (!s1 || !s2)
-		return (!s1 ? ft_strdup(s2) : ft_strdup(s1));
+		return (!s1 ? ft_strdup(s2) : 0);
 	if (!(str = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1)
 														* sizeof(char))))
 		return (0);
 	i = ft_strcpy(str, s1);
 	i += ft_strcpy(str + i, s2);
 	str[i] = '\0';
+	free(s1);
 	return (str);
 }
 
