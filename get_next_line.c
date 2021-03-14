@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 02:28:03 by hyyang            #+#    #+#             */
-/*   Updated: 2021/03/14 16:53:49 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/03/14 17:07:52 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,24 +50,24 @@ static int	ft_output(char **save, char **line, int r)
 
 	if (r < 0)
 		return (-1);
-	if (!*save)
+	if (*save)
 	{
-		*line = ft_strdup("");
-		return (0);
+		if ((nl = ft_containg_new_line(*save)) >= 0)
+		{
+			(*save)[nl] = '\0';
+			*line = ft_strdup(*save);
+			ft_save_after_newline(save, nl);
+			return (1);
+		}
+		else
+		{
+			*line = *save;
+			*save = 0;
+			return (0);
+		}
 	}
-	if ((nl = ft_containg_new_line(*save)) >= 0)
-	{
-		(*save)[nl] = '\0';
-		*line = ft_strdup(*save);
-		ft_save_after_newline(save, nl);
-		return (1);
-	}
-	else
-	{
-		*line = *save;
-		*save = 0;
-		return (0);
-	}	
+	*line = ft_strdup("");
+	return (0);	
 }
 
 int			get_next_line(int fd, char **line)
