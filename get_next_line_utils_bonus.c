@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: hyejinyang <hyejinyang@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 02:28:35 by hyyang            #+#    #+#             */
-/*   Updated: 2021/03/14 01:43:39 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/04/04 13:20:38 by hyejinyang       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ static size_t	ft_strlcat(char *dst, char *src, size_t dstsize)
 	return (dst_len + src_len);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char			*ft_strjoin(char *s1, char *s2)
 {
 	char	*str;
 	size_t	s1_len;

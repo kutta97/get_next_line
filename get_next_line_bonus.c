@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: hyejinyang <hyejinyang@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 02:28:03 by hyyang            #+#    #+#             */
-/*   Updated: 2021/03/14 01:43:34 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/04/04 13:20:14 by hyejinyang       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static int	ft_containg_new_line(char *s)
 {

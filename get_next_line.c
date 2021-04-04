@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: hyejinyang <hyejinyang@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 02:28:03 by hyyang            #+#    #+#             */
-/*   Updated: 2021/03/14 17:07:52 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/04/04 13:01:59 by hyejinyang       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ static int	ft_output(char **save, char **line, int r)
 		}
 	}
 	*line = ft_strdup("");
-	return (0);	
+	return (0);
 }
 
 int			get_next_line(int fd, char **line)
