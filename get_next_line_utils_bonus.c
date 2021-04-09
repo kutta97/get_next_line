@@ -6,11 +6,11 @@
 /*   By: hyejinyang <hyejinyang@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 02:28:35 by hyyang            #+#    #+#             */
-/*   Updated: 2021/04/04 13:20:38 by hyejinyang       ###   ########.fr       */
+/*   Updated: 2021/04/09 13:56:00 by hyejinyang       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t			ft_strlen(const char *s)
 {
