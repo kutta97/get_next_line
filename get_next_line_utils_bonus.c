@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyejinyang <hyejinyang@student.42.fr>      +#+  +:+       +#+        */
+/*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 02:28:35 by hyyang            #+#    #+#             */
-/*   Updated: 2021/04/09 13:56:00 by hyejinyang       ###   ########.fr       */
+/*   Updated: 2021/04/11 13:06:54 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
